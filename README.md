@@ -1,6 +1,3 @@
-
-
-
 **
 
 ## SYLF - See Your Line Follower
