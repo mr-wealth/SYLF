@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="E:\Personal\School\6 semestre\ESO\SYLF\3.Implementacao\build\CMakeFiles\3401ea8901451fa18bb253aa2a2cbb56\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{7643AED5-9F15-3290-89A3-72834F2AEDFB}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
