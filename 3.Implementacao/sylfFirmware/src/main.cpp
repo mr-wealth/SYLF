@@ -5,6 +5,7 @@
 
 #define SERVICE_UUID "e0cfbdd4-3367-4242-a6e6-0ff0d10021af"
 #define CHARACTERISTIC_UUID "12846e86-430a-45e8-890b-ae81d3bc49d3"
+BLECharacteristic *pCharacteristic = NULL;
 
 
 // put function declarations here:
@@ -17,10 +18,10 @@ void setup() {
   BLEDevice::init("ESP32_ROB");
   BLEServer *pServer = BLEDevice::createServer();
   BLEService *pService = pServer->createService(SERVICE_UUID);
-  BLECharacteristic *pCharacteristic = pService->createCharacteristic(
+  pCharacteristic = pService->createCharacteristic(
     CHARACTERISTIC_UUID,
     BLECharacteristic::PROPERTY_READ |
-    BLECharacteristic::PROPERTY_WRITE);
+    BLECharacteristic::PROPERTY_WRITE | BLECharacteristic::PROPERTY_NOTIFY);
   
   pCharacteristic->setValue("Hello World, it's Sylfie!");
   pService->start();
@@ -38,6 +39,7 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
+  pCharacteristic->notify();
   delay(2000);
 }
 
