@@ -25,12 +25,20 @@ void setup() {
   pCharacteristic->setValue("Hello World, it's Sylfie!");
   pService->start();
 
-  BLEAdvertising *pAdevertising = BLEDevice::getAdvertising();
+  BLEAdvertising *pAdvertising = BLEDevice::getAdvertising();
+  pAdvertising->addServiceUUID(SERVICE_UUID);
+  pAdvertising->setScanResponse(true);
+  pAdvertising->setMinPreferred(0x06);
+  pAdvertising->setMinPreferred(0x12);
+  BLEDevice::startAdvertising();
+  Serial.println("Chraracteristic defined! Now you can read it in your phone!");
+
   
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
+  delay(2000);
 }
 
 // put function definitions here:
