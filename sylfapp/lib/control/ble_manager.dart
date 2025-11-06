@@ -27,7 +27,8 @@ class BleManager {
     List<BluetoothService> services = await device.discoverServices();
     for (var service in services) {
       for (var char in service.characteristics) {
-        // Use your characteristic UUID for robot commands here
+        // Use your characteristic UUID for robot commands here. não pode ter hardcoding. criar algum mecanismo
+        //para gerar uuid e fazer autenticação e conexão
         if (char.uuid.toString() == "12846e86-430a-45e8-890b-ae81d3bc49d3") {
           commandCharacteristic = char;
           await commandCharacteristic!.setNotifyValue(true); // Enables notifications if needed
