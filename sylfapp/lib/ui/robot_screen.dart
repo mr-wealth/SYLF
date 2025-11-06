@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../ble/ble_manager.dart';
+import '../bleControl/ble_manager.dart';
 
 class RobotScreen extends StatelessWidget{
   final BleManager bleManager;

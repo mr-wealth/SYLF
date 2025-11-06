@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_blue_plus/flutter_blue_plus.dart';
-import '../ble/ble_manager.dart';
+import '../bleControl/ble_manager.dart';
 import 'robot_screen.dart';
 
 class ScanScreen extends StatefulWidget {
